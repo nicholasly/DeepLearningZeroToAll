@@ -31,7 +31,7 @@ is_correct = tf.equal(tf.arg_max(hypothesis, 1), tf.arg_max(Y, 1))
 accuracy = tf.reduce_mean(tf.cast(is_correct, tf.float32))
 
 # parameters
-training_epochs = 15
+training_epochs = 100
 batch_size = 100
 
 with tf.Session() as sess:

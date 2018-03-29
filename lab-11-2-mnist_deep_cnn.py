@@ -1,7 +1,7 @@
 # Lab 11 MNIST and Deep learning CNN
 import tensorflow as tf
 import random
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 from tensorflow.examples.tutorials.mnist import input_data
 
@@ -135,9 +135,8 @@ print("Label: ", sess.run(tf.argmax(mnist.test.labels[r:r + 1], 1)))
 print("Prediction: ", sess.run(
     tf.argmax(logits, 1), feed_dict={X: mnist.test.images[r:r + 1], keep_prob: 1}))
 
-# plt.imshow(mnist.test.images[r:r + 1].
-#           reshape(28, 28), cmap='Greys', interpolation='nearest')
-# plt.show()
+plt.imshow(mnist.test.images[r:r + 1].reshape(28, 28), cmap='Greys', interpolation='nearest')
+plt.show()
 
 '''
 Learning stared. It takes sometime.

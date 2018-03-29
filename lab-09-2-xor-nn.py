@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy as np
 
 tf.set_random_seed(777)  # for reproducibility
-learning_rate = 0.1
+learning_rate = 1
 
 x_data = [[0, 0],
           [0, 1],
@@ -43,7 +43,7 @@ with tf.Session() as sess:
     # Initialize TensorFlow variables
     sess.run(tf.global_variables_initializer())
 
-    for step in range(10001):
+    for step in range(100001):
         sess.run(train, feed_dict={X: x_data, Y: y_data})
         if step % 100 == 0:
             print(step, sess.run(cost, feed_dict={
